@@ -58,7 +58,7 @@
             </a></td>
             <td width="60%" valign="top">
               <p><a href="https://dz298.github.io/universal-drone-controller/" id="universal-drone-controller">
-              <papertitle>A Zero-shot Adaptive Quadcopter Controller</papertitle></a><br>
+              <papertitle>Learning a Single Near-hover Position Controller for Vastly Different Quadcopters</papertitle></a><br>
               <b>Dingqi Zhang</b>, Antonio Loquercio, Xiangyu Wu, Ashish Kumar, <br/>Jitendra Malik, Mark W. Mueller<br>
               ICRA 2023
               </p>
@@ -68,19 +68,28 @@
               <a href="javascript:toggleblock('udc_abs')">abstract</a> |
               <a shape="rect" href="javascript:togglebib('udc_bib')" class="togglebib">bibtex</a> |
               <a href="https://arxiv.org/abs/2209.09232">arXiv</a> |
-              <a href="https://youtu.be/3yQrDML5aWs">video</a> 
+              <a href="https://youtu.be/U-c-LbTfvoA">video</a> 
           
-              <p align="justify"> <i id="udc_abs">This paper proposes a universal adaptive controller for quadcopters which can be deployed zero-shot to quadcopters of very different mass, arm lengths and motor constants, and also shows rapid adaptation to unknown disturbances during runtime. The core algorithmic idea is to learn a single policy that can adapt online at test time not only to the disturbances applied to the drone, but also to the robot dynamics and hardware in the same framework. We achieve this by training a neural network to estimate a latent representation of the robot and environment parameters, which is used to condition the behaviour of the controller, also represented as a neural network. We train both networks exclusively in simulation with the goal of flying the quadcopters to goal positions and avoiding crashes to the ground. We directly deploy the same controller trained in the simulation without any modifications on two quadcopters with differences in mass, inertia, and maximum motor speed of up to 4 times. In addition, we show rapid adaptation to sudden and large disturbances (up to 35.7%) in the mass and inertia of the quadcopters. We perform an extensive evaluation in both simulation and physical worlds, where we outperform a state-of-the-art learning-based adaptive controller and a traditional PID controller specifically tuned to each platform individually.</i></p>
-<i id="udc_bib"><pre xml:space="preserve">
-@article{zhang2022zero,
-  title={A Zero-Shot Adaptive Quadcopter Controller},
+              <p align="justify"> <i id="udc_abs">This paper proposes an adaptive near-hover position controller for quadcopters, which can be deployed to quadcopters of very different mass, size and motor constants, and also shows rapid adaptation to unknown disturbances during runtime. The core algorithmic idea is to learn a single policy that can adapt online at test time not only to the disturbances applied to the drone, but also to the robot dynamics and hardware in the same framework. We achieve this by training a neural network to estimate a latent representation of the robot and environment parameters, which is used to condition the behaviour of the controller, also represented as a neural network. We train both networks exclusively in simulation with the goal of flying the quadcopters to goal positions and avoiding crashes to the ground. We directly deploy the same controller trained in the simulation without any modifications on two quadcopters in the real world with differences in mass, size, motors, and propellers with mass differing by 4.5 times. In addition, we show rapid adaptation to sudden and large disturbances up to one-third of the mass of the quadcopters. We perform an extensive evaluation in both simulation and the physical world, where we outperform a state-of-the-art learning-based adaptive controller and a traditional PID controller specifically tuned to each platform individually.</i></p>
+<small><i id="udc_bib"><pre xml:space="preserve">
+@article{zhang2023learning,
+  title={Learning a Single Near-hover Position Controller 
+    for Vastly Different Quadcopters},
   author={Zhang, Dingqi and Loquercio, Antonio and 
   Wu, Xiangyu and Kumar, Ashish and 
   Malik, Jitendra and Mueller, Mark W},
   journal={arXiv preprint arXiv:2209.09232},
   year={2022}
 }
-</pre></i>
+<!-- @misc{zhang2023learning,
+  title={Learning a Single Near-hover Position Controller for Vastly Different Quadcopters}, 
+  author={Dingqi Zhang and Antonio Loquercio and Xiangyu Wu and Ashish Kumar and Jitendra Malik and Mark W. Mueller},
+  year={2023},
+  eprint={2209.09232},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+} -->
+</pre></i></small>
               </div>
             </td>
           </tr>
