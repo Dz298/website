@@ -122,14 +122,7 @@
   journal={arXiv preprint arXiv:2209.09232},
   year={2022}
 }
-<!-- @misc{zhang2023learning,
-  title={Learning a Single Near-hover Position Controller for Vastly Different Quadcopters}, 
-  author={Dingqi Zhang and Antonio Loquercio and Xiangyu Wu and Ashish Kumar and Jitendra Malik and Mark W. Mueller},
-  year={2023},
-  eprint={2209.09232},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO}
-} -->
+
 </pre>
                       </i></small>
                   </div>
@@ -139,53 +132,92 @@
             </tbody>
           </table>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
-                <td>
-                  <heading>Personal</heading> <br> <br>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Project</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
 
-                  <heading1>
-                    In my spare time, I play <a href="images/tennis.jpeg">tennis</a> and <a
-                      href="images/climb.jpeg">climb</a>. I'm also raising a <a href="images/cat.jpeg">cat</a>!
-                  </heading1>
+              <tr>
+                <td width="37%" valign="top" align="center"><a>
+                    <video autoplay loop muted src="images/trim_demo_tennibot.mov" alt="sym" width="90%"
+                      style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
+                  </a></td>
+                <td width="60%" valign="top">
+                  <p><a id="tennibot">
+                      <papertitle>Tennibot: An Antonomous Tennis Ball Collector</papertitle>
+                    </a><br>
+                    <b>Dingqi Zhang*</b>, Jerry Tang*<br>
+                    <span style="color: orange;">(Spark Grant, 9%)</span>
+                  </p>
+
+                  <div class="paper" id="tb">
+                    <a href="javascript:toggleblock('tb_abs')">abstract</a> |
+                    <a href="images/remove_audio_tennibot.mov">video</a>
+                  </div>
+                  <p align="justify"> <i id="tb_abs">Ball collection has already been a laborous and time-consuming work
+                      in tennis training. We design Tennibot to automate this process, so that players and coaches can
+                      dedicate their efforts entirely to skill development. Tennibot is a mobile robot that can collect
+                      tennis balls autonomously. It is equipped with a roller to collect balls and a cassie platform to
+                      move freely. We have built a prototype and demonstrated its functionality. We are currently
+                      working on adding vision into the system so that the Tennibot can compute optimal paths for
+                      maximum collection efficiency based on vision inputs.
+                      Our proposal has been selected for Spark Grant in Fall 2023 by <a
+                        href="https://jacobsinstitute.berkeley.edu/the-jacobs-institute-innovation-catalysts/">the
+                        Jacobs Institude Innovation Catalysts</a>.
+                  </p>
 
                 </td>
               </tr>
             </tbody>
           </table>
-          <table width="100%" align="center" border="0" cellpadding="20">
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tbody>
-              <!-- <tr>
-            <td style="padding:20px;width:30%;vertical-align:middle"><img width=100% src="images/climb_horiz.jpg"></td>
-            <td style="padding:20px;width:30%;vertical-align:middle"><img width=100% src="images/skydive.jpg"></td>
-            <td style="padding:20px;width:30%;vertical-align:middle"><img width=100% src="images/bungy.jpg"></td>
-          </tr> -->
-
-
+              <tr>
+                <td>
+                  <heading>Personal</heading> <br> <br>
+                  <heading1>
+                    In my spare time, I play <a href="javascript:toggleblock('image_tennis')">tennis</a> and
+                    <a href="javascript:toggleblock('image_climb')">climb</a>. I'm also raising a
+                    <a href="javascript:toggleblock('image_cat')">cat</a>!
+                  </heading1>
+                </td>
+              </tr>
             </tbody>
           </table>
-        </td>
-      </tr>
-  </table>
 
-  <table width="100%" align="right" border="0" cellpadding="20">
-    <tbody>
-      <br>
-      <br>
-      <tr>
-        <td style="text-align:center;font-size:15px">Website adapted from
-          <a href="https://jonbarron.info/">Jon Barron</a> and
-          <a href="https://ashish-kmr.github.io">Ashish Kumar</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <p id="image_tennis" style="display: none;"><img width=50% src="images/tennis.jpeg" alt="Tennis"></p>
+          <p id="image_climb" style="display: none;"><img width=50% src="images/climb.jpeg" alt="Climbing"></p>
+          <p id="image_cat" style="display: none;"><img width=50% src="images/cat.jpeg" alt="Cat"></p>
+
+          <table width="100%" align="right" border="0" cellpadding="20">
+            <tbody>
+              <br>
+              <br>
+              <tr>
+                <td style="text-align:center;font-size:15px">Website adapted from
+                  <a href="https://jonbarron.info/">Jon Barron</a> and
+                  <a href="https://ashish-kmr.github.io">Ashish Kumar</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 </body>
 
 <script xml:space="preserve" language="JavaScript">
   hideblock('udc_abs');
+  hideblock('tb_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
