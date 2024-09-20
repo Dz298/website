@@ -96,48 +96,106 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr>
-                <td width="37%" valign="top" align="center"><a
-                    href="https://dz298.github.io/universal-drone-controller/">
-                    <video autoplay loop muted src="images/trimm-icra23-v7-2.mp4" alt="sym" width="90%"
-                      style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
-                  </a></td>
-                <td width="60%" valign="top">
-                  <p><a href="https://dz298.github.io/universal-drone-controller/" id="universal-drone-controller">
-                      <papertitle>Learning a Single Near-hover Position Controller for Vastly Different Quadcopters
-                      </papertitle>
-                    </a><br>
-                    <b>Dingqi Zhang</b>, Antonio Loquercio, Xiangyu Wu, Ashish Kumar, <br />Jitendra Malik, Mark W.
-                    Mueller<br>
-                    ICRA 2023
-                  </p>
+              <tr></tr>
+              <td width="37%" valign="top" align="center">
+                <img src="papers/TRO_VideoSupp-ezgif.com-cut.gif" alt="sym" width="90%"
+                  style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black">
+              </td>
+              <td width="60%" valign="top">
+                <p><a href="https://github.com/muellerlab/xadapt_ctrl" id="TRO-xadap">
+                    <papertitle>A Learning-based Quadcopter Controller with Extreme Adaptation
+                    </papertitle>
+                  </a><br>
+                  <b>Dingqi Zhang</b>, Antonio Loquercio, Jerry Tang, Ting-Hao Wang, <br />Jitendra Malik, Mark W.
+                  Mueller<br>
+                  <i>Preprint</i>, 2024
+                </p>
 
-                  <div class="paper" id="udc">
-                    <a href="https://dz298.github.io/universal-drone-controller/">webpage</a> |
-                    <a href="https://github.com/Dz298/adap_drone_lowlevelctrl">code</a> |
-                    <a href="javascript:toggleblock('udc_abs')">abstract</a> |
-                    <a shape="rect" href="javascript:togglebib('udc_bib')" class="togglebib">bibtex</a> |
-                    <a href="https://arxiv.org/abs/2209.09232">arXiv</a> |
-                    <a href="https://youtu.be/U-c-LbTfvoA">video</a>
+                <div class="paper" id="xadap">
+                  <a href="https://github.com/muellerlab/xadapt_ctrl">code</a> |
+                  <a href="javascript:toggleblock('xadap_abs')">abstract</a> |
+                  <a shape="rect" href="javascript:togglebib('xadap_bib')" class="togglebib">bibtex</a> |
+                  <a href="https://arxiv.org/abs/2409.12949">arXiv</a> |
+                  <a href="https://youtu.be/kZEU8lxMZug">video</a>
 
-                    <p align="justify"> <i id="udc_abs">This paper proposes an adaptive near-hover position controller
-                        for quadcopters, which can be deployed to quadcopters of very different mass, size and motor
-                        constants, and also shows rapid adaptation to unknown disturbances during runtime. The core
-                        algorithmic idea is to learn a single policy that can adapt online at test time not only to the
-                        disturbances applied to the drone, but also to the robot dynamics and hardware in the same
-                        framework. We achieve this by training a neural network to estimate a latent representation of
-                        the robot and environment parameters, which is used to condition the behaviour of the
-                        controller, also represented as a neural network. We train both networks exclusively in
-                        simulation with the goal of flying the quadcopters to goal positions and avoiding crashes to the
-                        ground. We directly deploy the same controller trained in the simulation without any
-                        modifications on two quadcopters in the real world with differences in mass, size, motors, and
-                        propellers with mass differing by 4.5 times. In addition, we show rapid adaptation to sudden and
-                        large disturbances up to one-third of the mass of the quadcopters. We perform an extensive
-                        evaluation in both simulation and the physical world, where we outperform a state-of-the-art
-                        learning-based adaptive controller and a traditional PID controller specifically tuned to each
-                        platform individually.</i></p>
-                    <small><i id="udc_bib">
-                        <pre xml:space="preserve">
+                  <p align="justify"> <i id="xadap_abs">This paper introduces a learning-based low-level controller for
+                      quadcopters, which adaptively controls quadcopters with significant variations in mass, size, and
+                      actuator capabilities. Our approach leverages a combination of imitation learning and
+                      reinforcement learning, creating a fast-adapting and general control framework for quadcopters
+                      that eliminates the need for precise model estimation or manual tuning. The controller estimates a
+                      latent representation of the vehicle's system parameters from sensor-action history, enabling it
+                      to adapt swiftly to diverse dynamics.
+                      Extensive evaluations in simulation demonstrate the controller's ability to generalize to unseen
+                      quadcopter parameters, with an adaptation range up to 16 times broader than the training set. In
+                      real-world tests, the controller is successfully deployed on quadcopters with mass differences of
+                      3.7 times and propeller constants varying by more than 100 times, while also showing rapid
+                      adaptation to disturbances such as off-center payloads and motor failures. These results highlight
+                      the potential of our controller in extreme adaptation to simplify the design process and enhance
+                      the reliability of autonomous drone operations in unpredictable environments.</i></p>
+                  <small><i id="xadap_bib">
+                      <pre xml:space="preserve">
+@misc{zhang2024learningbasedquadcoptercontrollerextreme,
+  title={A Learning-based Quadcopter Controller 
+    with Extreme Adaptation}, 
+  author={Dingqi Zhang and Antonio Loquercio 
+    and Jerry Tang and Ting-Hao Wang 
+    and Jitendra Malik and Mark W. Mueller},
+  year={2024},
+  eprint={2409.12949},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2409.12949}, 
+}
+
+</pre>
+                    </i></small>
+                </div>
+              </td>
+      </tr>
+
+
+
+      <tr>
+        <td width="37%" valign="top" align="center"><a href="https://dz298.github.io/universal-drone-controller/">
+            <video autoplay loop muted src="images/trimm-icra23-v7-2.mp4" alt="sym" width="90%"
+              style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
+          </a></td>
+        <td width="60%" valign="top">
+          <p><a href="https://dz298.github.io/universal-drone-controller/" id="universal-drone-controller">
+              <papertitle>Learning a Single Near-hover Position Controller for Vastly Different Quadcopters
+              </papertitle>
+            </a><br>
+            <b>Dingqi Zhang</b>, Antonio Loquercio, Xiangyu Wu, Ashish Kumar, <br />Jitendra Malik, Mark W.
+            Mueller<br>
+            <i>International Conference on Robotics and Automation (ICRA)</i>, 2023
+          </p>
+
+          <div class="paper" id="udc">
+            <a href="https://dz298.github.io/universal-drone-controller/">webpage</a> |
+            <a href="https://github.com/Dz298/adap_drone_lowlevelctrl">code</a> |
+            <a href="javascript:toggleblock('udc_abs')">abstract</a> |
+            <a shape="rect" href="javascript:togglebib('udc_bib')" class="togglebib">bibtex</a> |
+            <a href="https://arxiv.org/abs/2209.09232">arXiv</a> |
+            <a href="https://youtu.be/U-c-LbTfvoA">video</a>
+
+            <p align="justify"> <i id="udc_abs">This paper proposes an adaptive near-hover position controller
+                for quadcopters, which can be deployed to quadcopters of very different mass, size and motor
+                constants, and also shows rapid adaptation to unknown disturbances during runtime. The core
+                algorithmic idea is to learn a single policy that can adapt online at test time not only to the
+                disturbances applied to the drone, but also to the robot dynamics and hardware in the same
+                framework. We achieve this by training a neural network to estimate a latent representation of
+                the robot and environment parameters, which is used to condition the behaviour of the
+                controller, also represented as a neural network. We train both networks exclusively in
+                simulation with the goal of flying the quadcopters to goal positions and avoiding crashes to the
+                ground. We directly deploy the same controller trained in the simulation without any
+                modifications on two quadcopters in the real world with differences in mass, size, motors, and
+                propellers with mass differing by 4.5 times. In addition, we show rapid adaptation to sudden and
+                large disturbances up to one-third of the mass of the quadcopters. We perform an extensive
+                evaluation in both simulation and the physical world, where we outperform a state-of-the-art
+                learning-based adaptive controller and a traditional PID controller specifically tuned to each
+                platform individually.</i></p>
+            <small><i id="udc_bib">
+                <pre xml:space="preserve">
 @article{zhang2023learning,
   title={Learning a Single Near-hover Position Controller 
     for Vastly Different Quadcopters},
@@ -149,103 +207,103 @@
 }
 
 </pre>
-                      </i></small>
-                  </div>
-                </td>
-              </tr>
+              </i></small>
+          </div>
+        </td>
+      </tr>
 
-            </tbody>
-          </table>
-
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Project</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-
-              <tr>
-                <td width="37%" valign="top" align="center"><a>
-                    <video autoplay loop muted src="images/trim_demo_tennibot.mp4" alt="sym" width="90%"
-                      style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
-                  </a></td>
-                <td width="60%" valign="top">
-                  <p><a id="tennibot">
-                      <papertitle>Tennibot: An Antonomous Tennis Ball Collector</papertitle>
-                    </a><br>
-                    <b>Dingqi Zhang*</b>, Jerry Tang*<br>
-                    <span style="color: rgb(247, 101, 4);">(SP24 Ignite Grant, 3% | FA23 Spark Grant, 9%)</span>
-                  </p>
-
-                  <div class="paper" id="tb">
-                    <a href="javascript:toggleblock('tb_abs')">abstract</a> |
-                    <a href="images/remove_audio_tennibot.mp4">video</a>
-                  </div>
-                  <p align="justify"> <i id="tb_abs">Ball collection has always been a laborous and time-consuming work
-                      in tennis training. We design Tennibot to automate this process, so that players and coaches can
-                      dedicate their efforts entirely to skill development. Tennibot is a mobile robot that can collect
-                      tennis balls autonomously. It is equipped with a roller to collect balls and a cassie platform to
-                      move freely. We have built a prototype and demonstrated its functionality. We are currently
-                      working on adding vision into the system so that the Tennibot can compute optimal paths for
-                      maximum collection efficiency based on vision inputs.
-                      Our proposal has been selected for Ignite Grant in Spring 2024 and Spark Grant in Fall 2023 by <a
-                        href="https://jacobsinstitute.berkeley.edu/the-jacobs-institute-innovation-catalysts/">the
-                        Jacobs Institude Innovation Catalysts</a>.
-                  </p>
-
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tbody>
-              <tr>
-                <td>
-                  <heading>Personal</heading> <br> <br>
-                  <heading1>
-                    In my spare time, I play <a href="javascript:toggleblock('image_tennis')">tennis</a>, <a
-                      href="javascript:toggleblock('image_climb')">climb</a> and <a
-                      href="javascript:toggleblock('image_ski')">ski</a>. I'm also raising a
-                    <a href="javascript:toggleblock('image_cat')">cat</a>!
-                  </heading1>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p id="image_tennis" style="display: none;"><img width=50% src="images/tennis.jpeg" alt="Tennis"></p>
-          <p id="image_climb" style="display: none;"><img width=50% src="images/climb.jpeg" alt="Climbing"></p>
-          <p id="image_ski" style="display: none;"><img width=50% src="images/ski.jpeg" alt="Skiing"></p>
-          <p id="image_cat" style="display: none;"><img width=50% src="images/cat.jpg" alt="Cat"></p>
+    </tbody>
+  </table>
 
 
-          <table width="100%" align="right" border="0" cellpadding="20">
-            <tbody>
-              <br>
-              <br>
-              <tr>
-                <td style="text-align:center;font-size:15px">Website adapted from
-                  <a href="https://jonbarron.info/">Jon Barron</a> and
-                  <a href="https://ashish-kmr.github.io">Ashish Kumar</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr>
+        <td style="padding:20px;width:100%;vertical-align:middle">
+          <heading>Project</heading>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+
+      <tr>
+        <td width="37%" valign="top" align="center"><a>
+            <video autoplay loop muted src="images/trim_demo_tennibot.mp4" alt="sym" width="90%"
+              style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
+          </a></td>
+        <td width="60%" valign="top">
+          <p><a id="tennibot">
+              <papertitle>Tennibot: An Antonomous Tennis Ball Collector</papertitle>
+            </a><br>
+            <b>Dingqi Zhang*</b>, Jerry Tang*<br>
+            <span style="color: rgb(247, 101, 4);">(SP24 Ignite Grant, 3% | FA23 Spark Grant, 9%)</span>
+          </p>
+
+          <div class="paper" id="tb">
+            <a href="javascript:toggleblock('tb_abs')">abstract</a> |
+            <a href="images/remove_audio_tennibot.mp4">video</a>
+          </div>
+          <p align="justify"> <i id="tb_abs">Ball collection has always been a laborous and time-consuming work
+              in tennis training. We design Tennibot to automate this process, so that players and coaches can
+              dedicate their efforts entirely to skill development. Tennibot is a mobile robot that can collect
+              tennis balls autonomously. It is equipped with a roller to collect balls and a cassie platform to
+              move freely. We have built a prototype and demonstrated its functionality. We are currently
+              working on adding vision into the system so that the Tennibot can compute optimal paths for
+              maximum collection efficiency based on vision inputs.
+              Our proposal has been selected for Ignite Grant in Spring 2024 and Spark Grant in Fall 2023 by <a
+                href="https://jacobsinstitute.berkeley.edu/the-jacobs-institute-innovation-catalysts/">the
+                Jacobs Institude Innovation Catalysts</a>.
+          </p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td>
+          <heading>Personal</heading> <br> <br>
+          <heading1>
+            In my spare time, I play <a href="javascript:toggleblock('image_tennis')">tennis</a>, <a
+              href="javascript:toggleblock('image_climb')">climb</a> and <a
+              href="javascript:toggleblock('image_ski')">ski</a>. I'm also raising a
+            <a href="javascript:toggleblock('image_cat')">cat</a>!
+          </heading1>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p id="image_tennis" style="display: none;"><img width=50% src="images/tennis.jpeg" alt="Tennis"></p>
+  <p id="image_climb" style="display: none;"><img width=50% src="images/climb.jpeg" alt="Climbing"></p>
+  <p id="image_ski" style="display: none;"><img width=50% src="images/ski.jpeg" alt="Skiing"></p>
+  <p id="image_cat" style="display: none;"><img width=50% src="images/cat.jpg" alt="Cat"></p>
+
+
+  <table width="100%" align="right" border="0" cellpadding="20">
+    <tbody>
+      <br>
+      <br>
+      <tr>
+        <td style="text-align:center;font-size:15px">Website adapted from
+          <a href="https://jonbarron.info/">Jon Barron</a> and
+          <a href="https://ashish-kmr.github.io">Ashish Kumar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 
 <script xml:space="preserve" language="JavaScript">
   hideblock('udc_abs');
   hideblock('tb_abs');
+  hideblock('xadap_abs');
+  hideblock('proxfly_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
