@@ -154,7 +154,71 @@
               </td>
       </tr>
 
+      <tr></tr>
+      <td width="37%" valign="top" align="center">
+        <video autoplay loop muted src="papers/proxfly.mov" alt="sym" width="90%"
+          style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"></video>
+      </td>
+      <td width="60%" valign="top">
+        <p>
+          <papertitle>ProxFly: Robust Control for Close Proximity Quadcopter Flight via Residual Reinforcement
+            Learning
+          </papertitle>
+          <br>
+          Ruiqi Zhang, <b>Dingqi Zhang</b>, Mark W. Mueller<br>
+          <i>Preprint</i>, 2024
+        </p>
 
+        <div class="paper" id="proxfly">
+          <a href="javascript:toggleblock('proxfly_abs')">abstract</a> | <!--TODO-->
+          <a shape="rect" href="javascript:togglebib('proxfly_bib')" class="togglebib">bibtex</a> | <!--TODO-->
+          <a href="https://arxiv.org/abs/2409.13193">arXiv</a> | <!--TODO-->
+          <a href="https://youtu.be/NhPKgzd3l6w?si=tRCYwWsWDxtwjfrc">video</a> <!--TODO-->
+
+          <p align="justify"> <i id="proxfly_abs">This paper proposes the ProxFly, a residual deep
+              Reinforcement Learning (RL)-based controller for close prox-
+              imity quadcopter flight. Specifically, we design a residual mod-
+              ule on top of a cascaded controller (denoted as basic controller)
+              to generate high-level control commands, which compensate
+              for external disturbances and thrust loss caused by downwash
+              effects from other quadcopters. First, our method takes only the
+              ego state and controllers’ commands as inputs and does not rely
+              on any communication between quadcopters, thereby reducing
+              the bandwidth requirement. Through domain randomization,
+              our method relaxes the requirement for accurate system iden-
+              tification and fine-tuned controller parameters, allowing it to
+              adapt to changing system models. Meanwhile, our method
+              not only reduces the proportion of unexplainable signals from
+              the black box in control commands but also enables the RL
+              training to skip the time-consuming exploration from scratch
+              via guidance from the basic controller. We validate the effec-
+              tiveness of the residual module in the simulation with different
+              proximities. Moreover, we conduct the real close proximity
+              flight test to compare ProxFly with the basic controller and
+              an advanced model-based controller with complex aerodynamic
+              compensation. Finally, we show that ProxFly can be used for
+              challenging quadcopter in-air docking, where two quadcopters
+              fly in extreme proximity, and strong airflow significantly dis-
+              rupts flight. However, our method can stabilize the quadcopter
+              in this case and accomplish docking.</i></p>
+          <small><i id="proxfly_bib">
+              <pre xml:space="preserve">
+@misc{zhang2024proxflyrobustcontrolclose,
+  title={ProxFly: Robust Control for Close Proximity 
+    Quadcopter Flight via Residual Reinforcement Learning}, 
+  author={Ruiqi Zhang and Dingqi Zhang and Mark W. Mueller},
+  year={2024},
+  eprint={2409.13193},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2409.13193}, 
+}
+
+</pre>
+            </i></small>
+        </div>
+      </td>
+      </tr>
 
       <tr>
         <td width="37%" valign="top" align="center"><a href="https://dz298.github.io/universal-drone-controller/">
