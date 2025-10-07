@@ -134,44 +134,96 @@
 
               <tr></tr>
               <td width="37%" valign="top" align="center">
-                <img src="papers/TRO_VideoSupp-ezgif.com-cut.gif" alt="sym" width="90%"
+                <img src="papers/ACC26.png" alt="System Overview" width="90%"
                   style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black">
               </td>
               <td width="60%" valign="top">
-                <p><a href="https://github.com/muellerlab/xadapt_ctrl" id="TRO-xadap">
-                    <papertitle>A Learning-based Quadcopter Controller with Extreme Adaptation
+                <p><a href="https://arxiv.org/abs/2510.03471" id="sim-eval-suite">
+                    <papertitle>A Simulation Evaluation Suite for Robust Adaptive Quadcopter Control
                     </papertitle>
                   </a><br>
-                  <b>Dingqi Zhang</b>, Antonio Loquercio, Jerry Tang, Ting-Hao Wang, <br />Jitendra Malik, Mark W.
-                  Mueller<br>
-                  <span style="color: rgb(247, 101, 4);">
-                    <i>IEEE Transactions on Robotics</i>, 2025
-                  </span>
+                  <b>Dingqi Zhang</b>, Ran Tao, Sheng Cheng, Naira Hovakimyan, Mark W. Mueller<br>
+                  <i>arXiv preprint</i>, 2025
                 </p>
 
-                <div class="paper" id="xadap">
-                  <a href="https://github.com/muellerlab/xadapt_ctrl">code</a> |
-                  <a href="javascript:toggleblock('xadap_abs')">abstract</a> |
-                  <a shape="rect" href="javascript:togglebib('xadap_bib')" class="togglebib">bibtex</a> |
-                  <a href="https://arxiv.org/abs/2409.12949">arXiv</a> |
-                  <a href="https://youtu.be/kZEU8lxMZug">video</a>
+                <div class="paper" id="sim-eval">
+                  <a href="https://github.com/Dz298/AdaptiveQuadBench">code</a> |
+                  <a href="javascript:toggleblock('sim-eval_abs')">abstract</a> |
+                  <a shape="rect" href="javascript:togglebib('sim-eval_bib')" class="togglebib">bibtex</a> |
+                  <a href="https://arxiv.org/abs/2510.03471">arXiv</a>
 
-                  <p align="justify"> <i id="xadap_abs">This paper introduces a learning-based low-level controller for
-                      quadcopters, which adaptively controls quadcopters with significant variations in mass, size, and
-                      actuator capabilities. Our approach leverages a combination of imitation learning and
-                      reinforcement learning, creating a fast-adapting and general control framework for quadcopters
-                      that eliminates the need for precise model estimation or manual tuning. The controller estimates a
-                      latent representation of the vehicle's system parameters from sensor-action history, enabling it
-                      to adapt swiftly to diverse dynamics.
-                      Extensive evaluations in simulation demonstrate the controller's ability to generalize to unseen
-                      quadcopter parameters, with an adaptation range up to 16 times broader than the training set. In
-                      real-world tests, the controller is successfully deployed on quadcopters with mass differences of
-                      3.7 times and propeller constants varying by more than 100 times, while also showing rapid
-                      adaptation to disturbances such as off-center payloads and motor failures. These results highlight
-                      the potential of our controller in extreme adaptation to simplify the design process and enhance
-                      the reliability of autonomous drone operations in unpredictable environments.</i></p>
-                  <small><i id="xadap_bib">
+                  <p align="justify"> <i id="sim-eval_abs">Robust adaptive control methods are essential for maintaining
+                      quadcopter performance under external disturbances and model uncertainties. However, fragmented
+                      evaluations across tasks, simulators, and implementations hinder systematic comparison of these
+                      methods. This paper introduces an easy-to-deploy, modular simulation testbed for quadcopter
+                      control, built on RotorPy, that enables evaluation under a wide range of disturbances such as
+                      wind, payload shifts, rotor faults, and control latency. The framework includes a library of
+                      representative adaptive and non-adaptive controllers and provides task-relevant metrics to assess
+                      tracking accuracy and robustness. The unified modular environment enables reproducible evaluation
+                      across control methods and eliminates redundant reimplementation of components such as disturbance
+                      models, trajectory generators, and analysis tools. We illustrate the testbed's versatility through
+                      examples spanning multiple disturbance scenarios and trajectory types, including automated stress
+                      testing, to demonstrate its utility for systematic analysis.</i></p>
+                  <small><i id="sim-eval_bib">
                       <pre xml:space="preserve">
+@misc{zhang2025simulationevaluationsuite,
+  title={A Simulation Evaluation Suite for Robust
+     Adaptive Quadcopter Control}, 
+  author={Dingqi Zhang and Ran Tao and Sheng Cheng
+     and Naira Hovakimyan and Mark W. Mueller},
+  year={2025},
+  eprint={2510.03471},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2510.03471}, 
+}
+
+</pre>
+                    </i></small>
+                </div>
+              </td>
+      </tr>
+
+      <tr style="background-color: #ffffcc;"></tr>
+      <td width="37%" valign="top" align="center" style="background-color: #ffffcc;">
+        <img src="papers/TRO_VideoSupp-ezgif.com-cut.gif" alt="sym" width="90%"
+          style="margin-top:15px;padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black">
+      </td>
+      <td width="60%" valign="top" style="background-color: #ffffcc;">
+        <p><a href="https://github.com/muellerlab/xadapt_ctrl" id="TRO-xadap">
+            <papertitle>A Learning-based Quadcopter Controller with Extreme Adaptation
+            </papertitle>
+          </a><br>
+          <b>Dingqi Zhang</b>, Antonio Loquercio, Jerry Tang, Ting-Hao Wang, <br />Jitendra Malik, Mark W.
+          Mueller<br>
+          <span style="color: rgb(247, 101, 4);">
+            <i>IEEE Transactions on Robotics</i>, 2025
+          </span>
+        </p>
+
+        <div class="paper" id="xadap">
+          <a href="https://github.com/muellerlab/xadapt_ctrl">code</a> |
+          <a href="javascript:toggleblock('xadap_abs')">abstract</a> |
+          <a shape="rect" href="javascript:togglebib('xadap_bib')" class="togglebib">bibtex</a> |
+          <a href="https://arxiv.org/abs/2409.12949">arXiv</a> |
+          <a href="https://youtu.be/kZEU8lxMZug">video</a>
+
+          <p align="justify"> <i id="xadap_abs">This paper introduces a learning-based low-level controller for
+              quadcopters, which adaptively controls quadcopters with significant variations in mass, size, and
+              actuator capabilities. Our approach leverages a combination of imitation learning and
+              reinforcement learning, creating a fast-adapting and general control framework for quadcopters
+              that eliminates the need for precise model estimation or manual tuning. The controller estimates a
+              latent representation of the vehicle's system parameters from sensor-action history, enabling it
+              to adapt swiftly to diverse dynamics.
+              Extensive evaluations in simulation demonstrate the controller's ability to generalize to unseen
+              quadcopter parameters, with an adaptation range up to 16 times broader than the training set. In
+              real-world tests, the controller is successfully deployed on quadcopters with mass differences of
+              3.7 times and propeller constants varying by more than 100 times, while also showing rapid
+              adaptation to disturbances such as off-center payloads and motor failures. These results highlight
+              the potential of our controller in extreme adaptation to simplify the design process and enhance
+              the reliability of autonomous drone operations in unpredictable environments.</i></p>
+          <small><i id="xadap_bib">
+              <pre xml:space="preserve">
 @misc{zhang2024learningbasedquadcoptercontrollerextreme,
   title={A Learning-based Quadcopter Controller 
     with Extreme Adaptation}, 
@@ -186,9 +238,9 @@
 }
 
 </pre>
-                    </i></small>
-                </div>
-              </td>
+            </i></small>
+        </div>
+      </td>
       </tr>
 
       <tr></tr>
@@ -436,6 +488,7 @@
   hideblock('tb_abs');
   hideblock('xadap_abs');
   hideblock('proxfly_abs');
+  hideblock('sim-eval_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
