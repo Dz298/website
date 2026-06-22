@@ -3,6 +3,13 @@
    light background, monospace, shell-styled but scrollable
    ============================================================ */
 
+/* Hide abstracts & bibtex by default so they don't flash on load.
+   JS (togglebib/toggleblock) sets inline display to reveal them. */
+.paper p.abs > i,
+.paper pre {
+  display: none;
+}
+
 :root {
   --desk: #e7e3da;
   /* page behind the window */
