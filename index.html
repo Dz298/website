@@ -92,6 +92,52 @@
       <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> ls -lh ~/research</p>
       <div class="out">
 
+        <!-- paper 0 -->
+        <article class="item feat">
+          <div class="thumb">
+            <img loading="lazy" src="papers/latent_flow.png" alt="Framework Overview">
+          </div>
+          <div class="meta">
+            <p class="ptitle"><a href="https://arxiv.org/abs/2608.23887" id="latent-flow">Interpreting Control Latents
+                for System Identification via Conditional Flow Matching</a></p>
+            <p class="authors"><span class="me">Dingqi Zhang</span>, Ruiqi Zhang, Mark W. Mueller</p>
+            <p class="venue hot">arXiv preprint, 2026</p>
+            <div class="paper" id="latent-flow-links">
+              <a href="javascript:toggleblock('latent-flow_abs')">abstract</a>
+              <a shape="rect" href="javascript:togglebib('latent-flow_bib')" class="togglebib">bibtex</a>
+              <a href="https://arxiv.org/abs/2608.23887">arXiv</a>
+              <p class="abs"><i id="latent-flow_abs">Latent-conditioned adaptive policies can control robots across
+                  changing dynamics, but their learned latents remain internal representations of the policy rather than
+                  physical models that can be inspected, rolled out, or used by other control modules. This limits
+                  closed-loop analysis, diagnosis, and further improvement of a fixed policy. A direct mapping from latent
+                  to physical parameters is also under-specified, because multiple systems can induce similar closed-loop
+                  behavior. We therefore decode each operational latent into a distribution of quadrotor models using
+                  conditional flow matching. The decoded distribution enables two downstream uses without modifying the
+                  policy: online predictive tuning of a high-level controller around the fixed low-level policy, and
+                  robustness analysis under specified disturbances. Under perturbed actuator dynamics, decoded-model
+                  predictive tuning reduces position tracking RMSE by 23% and heading RMSE by 45% relative to fixed
+                  gains. Under Gaussian force disturbances, decoded-model ensembles closely predict the lateral
+                  tracking-error evolution. Together, these results show that control latents can be converted into
+                  physical model ensembles for tuning, robustness analysis, and diagnosis of frozen adaptive
+                  policies.</i></p>
+              <small><i id="latent-flow_bib">
+                  <pre xml:space="preserve">
+@misc{zhang2026interpretingcontrollatents,
+  title={Interpreting Control Latents for System
+     Identification via Conditional Flow Matching},
+  author={Dingqi Zhang and Ruiqi Zhang and Mark W. Mueller},
+  year={2026},
+  eprint={2608.23887},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2608.23887},
+}
+</pre>
+                </i></small>
+            </div>
+          </div>
+        </article>
+
         <!-- paper 1 -->
         <article class="item">
           <div class="thumb">
@@ -350,7 +396,7 @@
       <!-- ===== footer ===== -->
       <div class="foot">
         <span class="muted"># adapted from <a href="https://jonbarron.info/">Jon Barron</a> &amp;
-          <a href="https://ashish-kmr.github.io">Ashish Kumar</a> · last updated 2026/06/15</span>
+          <a href="https://ashish-kmr.github.io">Ashish Kumar</a> · last updated 2026/08/25</span>
         <script type="text/javascript" id="clustrmaps"
           src="//clustrmaps.com/map_v2.js?d=3rIdq8qHPdDE2mzukm_y0KL2VET8ofYPu5BI82s6cYk"></script>
       </div>
@@ -365,6 +411,7 @@
   hideblock('xadap_abs');
   hideblock('proxfly_abs');
   hideblock('sim-eval_abs');
+  hideblock('latent-flow_abs');
 </script>
 
 <script xml:space="preserve" language="JavaScript">
