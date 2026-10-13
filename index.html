@@ -68,7 +68,7 @@
       <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> cat contact.txt</p>
       <div class="out contact">
         <p><span class="k">email</span>[<a href="mailto:dingqi@berkeley.edu">dingqi@berkeley.edu</a>]</p>
-        <p><span class="k">cv</span>[<a href="file/CV_dingqi_zhang.pdf">CV.pdf</a>]</p>
+        <p><span class="k">cv</span>[<a href="file/CV_dingqi_zhang.pdf">CV.pdf</a>] [last updated in Sept 2025]</p>
         <p><span class="k">scholar</span>[<a
             href="https://scholar.google.com/citations?user=rzknuKEAAAAJ&hl=en">Google Scholar</a>]</p>
         <p><span class="k">linkedin</span>[<a href="https://www.linkedin.com/in/dingqi-zhang/">LinkedIn</a>]</p>
@@ -91,6 +91,60 @@
       <!-- ===== research ===== -->
       <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> ls -lh ~/research</p>
       <div class="out">
+
+        <!-- paper brace -->
+        <article class="item feat">
+          <div class="thumb">
+            <video src="papers/brace.mp4" poster="papers/brace_poster.jpg" autoplay loop muted playsinline
+              preload="metadata" aria-label="BRACE highlight video"></video>
+          </div>
+          <div class="meta">
+            <p class="ptitle"><a href="https://multiplylabs.github.io/brace/" id="brace">BRACE: Adapting Whole-Body
+                References for Force and Terrain Aware Humanoid Motion Tracking</a></p>
+            <p class="authors">Sudarshan Harithas, Chen Yu, Juan Borbon, Shubhankar Mondal, Winston Zha,
+              Srinath Sridhar, <span class="me">Dingqi Zhang</span>, Jiuguang Wang</p>
+            <p class="venue hot">arXiv preprint, 2026</p>
+            <div class="paper" id="brace-links">
+              <a href="https://multiplylabs.github.io/brace/">project page</a>
+              <a href="https://multiplylabs.github.io/robogym-online/">interactive demo</a>
+              <a href="https://www.youtube.com/watch?v=jASGzq4K5m0">video</a>
+              <a href="https://github.com/multiplylabs/brace">code</a>
+              <a href="javascript:toggleblock('brace_abs')">abstract</a>
+              <a shape="rect" href="javascript:togglebib('brace_bib')" class="togglebib">bibtex</a>
+              <a href="https://arxiv.org/abs/2610.07052">arXiv</a>
+              <p class="abs"><i id="brace_abs">Whole-body tracking has become the interface through which operators
+                  drive humanoid robots, yet the references it consumes are recorded on level ground and carrying
+                  nothing, so the tracker is aware of neither the forces the robot must exchange with objects nor the
+                  terrain it must stand on. Existing controllers address one side of this gap: force-capable policies
+                  command an end-effector force but prescribe no whole-body pose, while terrain-adaptive trackers treat
+                  loads as disturbances to reject rather than wrenches to command. We present BRACE, a whole-body
+                  tracker that exerts and compensates commanded hand forces from diverse poses while following a
+                  flat-ground reference on sloped terrain. Rather than leaving the tracker to absorb the load and the
+                  slope, BRACE folds both into the reference it follows: terrain conformance lifts footholds and root
+                  onto the local surface, and a wrench transformation resolves the hand displacement that produces a
+                  force jointly with the center-of-mass and center-of-pressure shifts it induces, bounded by
+                  teacher-specific arm-effort limits. Separate exertion and compensation teachers are distilled by
+                  DAgger into one flow-matching student that runs on proprioception alone, without a height map or
+                  measured wrench, so a teleoperator (even in remote locations) can supply a flat-ground trajectory and
+                  the robot resolves slope and load onboard. We conduct extensive experiments on the Unitree G1 to
+                  demonstrate the ability of BRACE to exert and compensate force and handle diverse terrain in
+                  simulation and real robot experiments.</i></p>
+              <small><i id="brace_bib">
+                  <pre xml:space="preserve">
+@article{harithas2026brace,
+  title={BRACE: Adapting Whole-Body References for
+     Force and Terrain Aware Humanoid Motion Tracking},
+  author={Harithas, Sudarshan and Yu, Chen and Borbon,
+     Juan and Mondal, Shubhankar and Zha, Winston and
+     Sridhar, Srinath and Zhang, Dingqi and Wang, Jiuguang},
+  journal={arXiv preprint arXiv:2610.07052},
+  year={2026}
+}
+</pre>
+                </i></small>
+            </div>
+          </div>
+        </article>
 
         <!-- paper 0 -->
         <article class="item feat">
@@ -396,7 +450,7 @@
       <!-- ===== footer ===== -->
       <div class="foot">
         <span class="muted"># adapted from <a href="https://jonbarron.info/">Jon Barron</a> &amp;
-          <a href="https://ashish-kmr.github.io">Ashish Kumar</a> · last updated 2026/08/25</span>
+          <a href="https://ashish-kmr.github.io">Ashish Kumar</a> · last updated 2026/10/13</span>
         <script type="text/javascript" id="clustrmaps"
           src="//clustrmaps.com/map_v2.js?d=3rIdq8qHPdDE2mzukm_y0KL2VET8ofYPu5BI82s6cYk"></script>
       </div>
