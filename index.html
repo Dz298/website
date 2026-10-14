@@ -25,18 +25,17 @@
       <!-- ===== login banner ===== -->
       <p class="login">Last login: Mon Jun 15 09:24 on ttys001</p>
       <div class="banner">
-        <div class="bline"><span class="bk">name</span><span class="name">Dingqi <span class="muted">(Daisy)</span>
-            Zhang</span> &nbsp;<span class="muted">// "ding-chee" 🔊</span></div>
+        <h1 class="name">Dingqi Zhang <span class="aka">(Daisy)</span></h1>
+        <p class="pron"><span class="muted">// "ding-chee" 🔊</span></p>
         <div class="bline"><span class="bk">role</span>Staff Research Scientist · <a
             href="https://multiplylabs.com/">Multiply Labs</a></div>
         <div class="bline"><span class="bk">focus</span>robot learning & control</div>
         <div class="bline"><span class="bk">edu</span>PhD · UC Berkeley (<a href="https://bair.berkeley.edu">BAIR</a>)
           &nbsp;|&nbsp; BS · Cornell University</div>
-        <div class="bline"><span class="bk">shell</span><span class="muted">/bin/zsh</span></div>
       </div>
 
       <!-- ===== whoami ===== -->
-      <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> whoami</p>
+      <h2 class="cmd first"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> whoami</h2>
       <div class="out">
         <div class="headshot">
           <div class="swap">
@@ -65,7 +64,7 @@
       </div>
 
       <!-- ===== contact ===== -->
-      <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> cat contact.txt</p>
+      <h2 class="cmd"><span class="ps">$</span> cat contact.txt</h2>
       <div class="out contact">
         <p><span class="k">email</span>[<a href="mailto:dingqi@berkeley.edu">dingqi@berkeley.edu</a>]</p>
         <p><span class="k">cv</span>[<a href="file/CV_dingqi_zhang.pdf">CV.pdf</a>] [last updated in Oct 2026]</p>
@@ -89,11 +88,56 @@
       </div> -->
 
       <!-- ===== research ===== -->
-      <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> ls -lh ~/research</p>
+      <h2 class="cmd"><span class="ps">$</span> ls ~/research</h2>
       <div class="out">
 
+        <div class="group">
+          <h3 class="gh"><span class="gdir">current/</span> humanoid &amp; dexterous manipulation
+            <span class="gwhere">· Multiply Labs</span></h3>
+
+        <!-- paper bopi -->
+        <article class="item hero">
+          <div class="thumb">
+            <img loading="lazy" src="papers/bopi.gif" alt="Humanoid pushing carts of unknown dynamics">
+          </div>
+          <div class="meta">
+            <p class="ptitle"><a href="https://arxiv.org/abs/2610.13087" id="bopi">Belief-Overlap Partial Inversion:
+                Object-Centric Flow Replanning for Humanoid Loco-Manipulation</a></p>
+            <p class="authors">Chen Yu, Sudarshan S. Harithas, Juan Borbon, <span class="me">Dingqi Zhang</span>,
+              Jiuguang Wang</p>
+            <p class="venue hot">arXiv preprint, 2026</p>
+            <div class="paper" id="bopi-links">
+              <a href="javascript:toggleblock('bopi_abs')">abstract</a>
+              <a shape="rect" href="javascript:togglebib('bopi_bib')" class="togglebib">bibtex</a>
+              <a href="https://arxiv.org/abs/2610.13087">arXiv</a>
+              <p class="abs"><i id="bopi_abs">People often learn how an unfamiliar object moves through a small
+                  exploratory push, using its response to guide their next motion. Inspired by this behavior, we study
+                  humanoids pushing carts whose mass and caster stiffness are initially unknown. Our object-centric
+                  framework closes online estimation, flow-based planning, and whole-body control into a loop, creating
+                  a tension: replacing the plan whenever the belief shifts disrupts the maneuver under way, while
+                  keeping it strands the robot on a path its evidence has ruled out. Belief-Overlap Partial Inversion
+                  (BOPI) scales revision to agreement, inverting the flow under the old belief only as far as the
+                  beliefs disagree before reconstructing under the new one. Across 18 simulated goals it lowers pooled
+                  final position and yaw error by roughly 33% and 47% against fixed-depth replanning, and on hardware
+                  it translates and turns a non-holonomic cart.</i></p>
+              <small><i id="bopi_bib">
+                  <pre xml:space="preserve">
+@article{yu2026bopi,
+  title={Belief-Overlap Partial Inversion: Object-Centric
+     Flow Replanning for Humanoid Loco-Manipulation},
+  author={Yu, Chen and Harithas, Sudarshan S and Borbon,
+     Juan and Zhang, Dingqi and Wang, Jiuguang},
+  journal={arXiv preprint arXiv:2610.13087},
+  year={2026}
+}
+</pre>
+                </i></small>
+            </div>
+          </div>
+        </article>
+
         <!-- paper brace -->
-        <article class="item feat">
+        <article class="item hero">
           <div class="thumb">
             <video src="papers/brace.mp4" poster="papers/brace_poster.jpg" autoplay loop muted playsinline
               preload="metadata" aria-label="BRACE highlight video"></video>
@@ -146,8 +190,15 @@
           </div>
         </article>
 
+        <!-- TODO: OATH goes here as an .item.hero entry once it is on arXiv -->
+        </div>
+
+        <div class="group">
+          <h3 class="gh"><span class="gdir">phd/</span> adaptive control across embodiments
+            <span class="gwhere">· UC Berkeley</span></h3>
+
         <!-- paper 0 -->
-        <article class="item feat">
+        <article class="item">
           <div class="thumb">
             <img loading="lazy" src="papers/latent_flow.png" alt="Framework Overview">
           </div>
@@ -155,7 +206,7 @@
             <p class="ptitle"><a href="https://arxiv.org/abs/2608.23887" id="latent-flow">Interpreting Control Latents
                 for System Identification via Conditional Flow Matching</a></p>
             <p class="authors"><span class="me">Dingqi Zhang</span>, Ruiqi Zhang, Mark W. Mueller</p>
-            <p class="venue hot">arXiv preprint, 2026</p>
+            <p class="venue">arXiv preprint, 2026</p>
             <div class="paper" id="latent-flow-links">
               <a href="javascript:toggleblock('latent-flow_abs')">abstract</a>
               <a shape="rect" href="javascript:togglebib('latent-flow_bib')" class="togglebib">bibtex</a>
@@ -391,10 +442,11 @@
           </div>
         </article>
 
+        </div>
       </div>
 
       <!-- ===== projects ===== -->
-      <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> ls ~/projects</p>
+      <h2 class="cmd"><span class="ps">$</span> ls ~/projects</h2>
       <div class="out">
         <article class="item">
           <div class="thumb">
@@ -422,7 +474,7 @@
       </div>
 
       <!-- ===== personal ===== -->
-      <p class="cmd"><span class="prompt">dingqi@web<span class="pe">:~$</span></span> cat ~/personal.md</p>
+      <h2 class="cmd"><span class="ps">$</span> cat ~/personal.md</h2>
       <div class="out">
         <p>
           <span class="muted"># in my spare time</span><br>
