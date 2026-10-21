@@ -95,6 +95,103 @@
           <h3 class="gh"><span class="gdir">current/</span> humanoid &amp; dexterous manipulation
             <span class="gwhere">· Multiply Labs</span></h3>
 
+        <!-- paper kinogen -->
+        <article class="item hero">
+          <div class="thumb">
+            <video src="papers/kinogen.mp4" poster="papers/kinogen_poster.jpg" autoplay loop muted playsinline
+              preload="metadata" aria-label="KinoGen hardware video"></video>
+          </div>
+          <div class="meta">
+            <p class="ptitle"><a href="https://kinogen-humanoid.github.io/" id="kinogen">KinoGen: Customizable
+                Humanoid Loco-Manipulation References via Kinematically Grounded Video Generation</a></p>
+            <p class="authors">Qi Wu, Lulu Zhao, Sanghyun Hahn, Rishi Yennu, Emmy Yang,
+              <span class="me">Dingqi Zhang</span>, Tao Pang, Jiuguang Wang, Kuan Fang</p>
+            <p class="venue hot">arXiv preprint, 2026</p>
+            <div class="paper" id="kinogen-links">
+              <a href="https://kinogen-humanoid.github.io/">project page</a>
+              <a href="javascript:toggleblock('kinogen_abs')">abstract</a>
+              <a shape="rect" href="javascript:togglebib('kinogen_bib')" class="togglebib">bibtex</a>
+              <a href="https://arxiv.org/abs/2610.20552">arXiv</a>
+              <p class="abs"><i id="kinogen_abs">We present KinoGen, a framework that synthesizes customizable
+                  humanoid loco-manipulation references through kinematically grounded video generation. KinoGen
+                  conditions a pretrained video generator on calibrated renders of the target robot and object in a
+                  simulated task instance and recovers the reference by fitting the same models to the generated
+                  two-view video, so that the reference lies in the robot configuration space by construction without
+                  a human body proxy or retargeting. Body, hand, and object priors initialize the reconstruction, and
+                  direct optimization against cross-view evidence refines it. Since an edited keyframe is simply
+                  another rendered state, a user can prescribe a goal object pose, regenerate the video around the
+                  edited keyframe, and obtain a reference that satisfies the pose exactly. Across eight
+                  loco-manipulation tasks, KinoGen yields lower penetration and foot skating than video-based
+                  baselines and preserves over 90% of annotated contacts, and its customized references satisfy every
+                  prescribed target with substantially less penetration than direct interpolation. Tracking policies
+                  trained on the synthesized references are deployed on a Unitree G1 humanoid with dexterous
+                  hands.</i></p>
+              <small><i id="kinogen_bib">
+                  <pre xml:space="preserve">
+@article{wu2026kinogen,
+  title={KinoGen: Customizable Humanoid Loco-Manipulation
+     References via Kinematically Grounded Video Generation},
+  author={Wu, Qi and Zhao, Lulu and Hahn, Sanghyun and
+     Yennu, Rishi and Yang, Emmy and Zhang, Dingqi and
+     Pang, Tao and Wang, Jiuguang and Fang, Kuan},
+  journal={arXiv preprint arXiv:2610.20552},
+  year={2026}
+}
+</pre>
+                </i></small>
+            </div>
+          </div>
+        </article>
+
+        <!-- paper oath -->
+        <article class="item hero">
+          <div class="thumb">
+            <video src="papers/oath.mp4" poster="papers/oath_poster.jpg" autoplay loop muted playsinline
+              preload="metadata" aria-label="OATH hardware video"></video>
+          </div>
+          <div class="meta">
+            <p class="ptitle"><a href="https://multiplylabs.github.io/oath/" id="oath">OATH: Object-Agnostic Tracking
+                for Dexterous Hands, Enabling Rapid Physics-based Retargeting</a></p>
+            <p class="authors">Solvin Sigurdson, Prasanna Sriganesh, Juan Borbon, Joel Burdick,
+              <span class="me">Dingqi Zhang</span>, Jiuguang Wang</p>
+            <p class="venue hot">arXiv preprint, 2026</p>
+            <div class="paper" id="oath-links">
+              <a href="https://multiplylabs.github.io/oath/">project page</a>
+              <a href="javascript:toggleblock('oath_abs')">abstract</a>
+              <a shape="rect" href="javascript:togglebib('oath_bib')" class="togglebib">bibtex</a>
+              <a href="https://arxiv.org/abs/2610.14379">arXiv</a>
+              <p class="abs"><i id="oath_abs">Retargeting human demonstrations into dynamically feasible dexterous
+                  hand trajectories requires resolving complex contact physics, yet current methods either omit
+                  physical constraints or rely on computationally expensive sampling-based optimization in simulation.
+                  Reinforcement learning has previously been used to achieve planning and control through contact
+                  dynamics; however, standard policies require object-specific training and fail to generalize across
+                  arbitrary geometries. This work reframes physics-based retargeting as a residual learning problem,
+                  where we demonstrate that zero-shot generalization across objects relies on structured state
+                  representations. Specifically, formulating the observation space to include a localized
+                  contact-error signal guiding each robot link to its target coordinate on the object surface enables
+                  a single, unified residual policy to successfully grasp novel, unseen object geometries. Rolling out
+                  this policy in simulation on a kinematic reference trajectory yields a physics-based retargeter,
+                  OATH. Operating at 0.4 seconds of compute per second of reference, OATH achieves 2.4x
+                  faster-than-real-time performance and a 60-350x reduction in computational cost compared to
+                  sampling-based methods. The system recovers 58% of held-out and 54% of unseen-object DexYCB
+                  trajectories while maintaining a sub-2 cm tracking error.</i></p>
+              <small><i id="oath_bib">
+                  <pre xml:space="preserve">
+@article{sigurdson2026oath,
+  title={OATH: Object-Agnostic Tracking for Dexterous Hands,
+     Enabling Rapid Physics-based Retargeting},
+  author={Sigurdson, Solvin and Sriganesh, Prasanna and
+     Borbon, Juan and Burdick, Joel and Zhang, Dingqi and
+     Wang, Jiuguang},
+  journal={arXiv preprint arXiv:2610.14379},
+  year={2026}
+}
+</pre>
+                </i></small>
+            </div>
+          </div>
+        </article>
+
         <!-- paper bopi -->
         <article class="item hero">
           <div class="thumb">
@@ -189,8 +286,6 @@
             </div>
           </div>
         </article>
-
-        <!-- TODO: OATH goes here as an .item.hero entry once it is on arXiv -->
         </div>
 
         <div class="group">
@@ -511,6 +606,10 @@
 </body>
 
 <script xml:space="preserve" language="JavaScript">
+  hideblock('kinogen_abs');
+  hideblock('oath_abs');
+  hideblock('bopi_abs');
+  hideblock('brace_abs');
   hideblock('udc_abs');
   hideblock('tb_abs');
   hideblock('xadap_abs');
