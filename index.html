@@ -99,7 +99,7 @@
         <article class="item hero">
           <div class="thumb">
             <video src="papers/kinogen.mp4" poster="papers/kinogen_poster.jpg" autoplay loop muted playsinline
-              preload="metadata" aria-label="KinoGen hardware video"></video>
+              preload="auto" aria-label="KinoGen hardware video"></video>
           </div>
           <div class="meta">
             <p class="ptitle"><a href="https://kinogen-humanoid.github.io/" id="kinogen">KinoGen: Customizable
@@ -147,7 +147,7 @@
         <article class="item hero">
           <div class="thumb">
             <video src="papers/oath.mp4" poster="papers/oath_poster.jpg" autoplay loop muted playsinline
-              preload="metadata" aria-label="OATH hardware video"></video>
+              preload="auto" aria-label="OATH hardware video"></video>
           </div>
           <div class="meta">
             <p class="ptitle"><a href="https://multiplylabs.github.io/oath/" id="oath">OATH: Object-Agnostic Tracking
@@ -237,7 +237,7 @@
         <article class="item hero">
           <div class="thumb">
             <video src="papers/brace.mp4" poster="papers/brace_poster.jpg" autoplay loop muted playsinline
-              preload="metadata" aria-label="BRACE highlight video"></video>
+              preload="auto" aria-label="BRACE highlight video"></video>
           </div>
           <div class="meta">
             <p class="ptitle"><a href="https://multiplylabs.github.io/brace/" id="brace">BRACE: Adapting Whole-Body
@@ -620,6 +620,26 @@
 
 <script xml:space="preserve" language="JavaScript">
   hideallbibs();
+</script>
+
+<script>
+  // Safari can paint a blank frame instead of the poster, so also show the
+  // poster as a background behind the video.
+  document.querySelectorAll('.thumb video[poster]').forEach(function (v) {
+    v.style.background = 'url("' + v.getAttribute('poster') + '") center / cover no-repeat';
+  });
+  // Autoplay can be skipped (back/forward cache, restored tabs, power saving),
+  // so nudge the thumbnail videos to play; on refusal the poster stays visible.
+  function playThumbs() {
+    document.querySelectorAll('.thumb video').forEach(function (v) {
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+  }
+  window.addEventListener('pageshow', playThumbs);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) playThumbs();
+  });
 </script>
 
 </html>
